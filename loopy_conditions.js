@@ -6,7 +6,17 @@
  * @param  { Number } b
  * @return { Number }
  */
+function greaterNumber(a, b) {
+  if (a > b) {
+    console.log(a);
+    return a;
+  } else {
+    console.log(b);
+    return b;
+  }
+}
 
+greaterNumber(3, 4);
 
 /**
  * Create a function called 'stringOfNumbers'.
@@ -18,6 +28,18 @@
  * @return { String }
  */
 
+function stringOfNumbers(num) {
+  var numbers = [0, num];
+  for (var i = 1; i < num; i++) {
+  numbers.splice(1, 0, num - i);
+  }
+  numbers.pop();
+  var result = numbers.join("");
+  console.log(result);
+  return result;
+}
+
+stringOfNumbers(20);
 
 /**
  * Create a function called 'sumOfArray'.
